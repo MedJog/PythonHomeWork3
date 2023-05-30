@@ -5,3 +5,19 @@
 # 5
 # 1 2 3 4 5
 # 3 -> 1
+from random import randint
+list_1 = []
+number = int(input('Введите количество элементов списка: '))
+for i in range(number):
+    list_1.append(randint(0, 10))
+print(list_1)
+element = int(input('Введите искомый элемент: '))
+count = 0
+for i in range(len(list_1)):
+    if list_1[i] == element:
+        count += 1
+if count > 0:
+    print(f' Элемент {element} встречается в списке {count} раз.')
+else:
+    print(f'Такого элемента в списке нет.')
+
